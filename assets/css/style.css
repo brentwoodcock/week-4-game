@@ -17,3 +17,42 @@ h1{
 h2, h4{
 	text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
+
+.btn{
+	border-radius: 0;
+	margin: 5px;
+}
+
+.possChar,
+.selectedChar{
+	border-color: #00BB1A;
+}
+
+.selectedTarget{
+	background-color: #000;
+	border-color: #00BB1A;
+	color: #fff;
+}
+
+.selectedTarget:hover,
+.selectedTarget:focus{
+	color: #fff;
+}
+
+.notSelected{
+	background-color: #FF0000;
+	border-color: #000;
+}
+
+.userTitle{
+	margin: 20px 0px;
+}
+
+.charTitle,
+.enemyTitle{
+	margin: 37px 0px 36px 0px;
+}
+
+.attack{
+	margin-top: 20px;
+}
