@@ -82,6 +82,7 @@ $(document).ready(function() {
             game.attack(heroId, enemyId);
             if (game[heroId].health <= 0) { // Player has been defeated
                 $("." + heroId + "health").html(game[heroId].health);
+                $("." + enemyId + "health").html(game[enemyId].health);
                 $("#status").html("You have been defeated . . . GAME OVER!!!");
                 $("#resetBtn").removeClass("hide");
             } else if (game[enemyId].health <= 0) { // Target has been defeated
