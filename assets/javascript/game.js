@@ -53,6 +53,7 @@ $(document).ready(function() {
     var heroSelected = false;
     var targetSelected = false;
 
+    // Character buttons click events
     $(".characters").on("click", function(event) {
 
         if (heroSelected == false) { // Sets user's character
@@ -66,6 +67,7 @@ $(document).ready(function() {
         $(".possChar").addClass("notSelected");
     });
 
+    // Attack button click events
     $("#attackBtn").on("click", function() {
 
         var heroId = $(".selectedChar").attr("id");
@@ -73,9 +75,9 @@ $(document).ready(function() {
 
         if (heroSelected == false) { // Error if no user character selected
             $("#status").html("You must choose a character before you can attack.");
-        } else if (targetSelected == false) { // Error if no target selected
+        } else if (targetSelected == false) { // Error if no defender selected
             $("#status").html("You must choose a character to attack.")
-        } else { // Runs when both character and target have been selected
+        } else { // Runs when both character and defender have been selected
             $("#status").html("You attacked " + game[enemyId].name + " for " + game[heroId].attack + " damage.<br>" + game[enemyId].name + " attacked you back for " + game[enemyId].counter + " damage.");
             game.attack(heroId, enemyId);
             if (game[heroId].health <= 0) { // Player has been defeated
@@ -99,12 +101,14 @@ $(document).ready(function() {
         }
     });
 
+    // Reset button click events
     $("#resetBtn").on("click", function() { // Restart game
         game.reset();
         for (var i = 1; i < 5; i++) { // Reset character buttons
             $("#char" + i).removeClass("hide selectedChar selectedTarget notSelected").addClass("possChar").appendTo(".characters");
             $(".char" + i + "health").html(game["char" + i].health);
         };
+        $(".charTitle").html("Characters");
         heroSelected = false;
         targetSelected = false;
         $("#status").html("");
