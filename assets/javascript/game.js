@@ -84,13 +84,13 @@ $(document).ready(function() {
                 $("." + heroId + "health").html(game[heroId].health);
                 $("." + enemyId + "health").html(game[enemyId].health);
                 $("#status").html("You have been defeated . . . GAME OVER!!!");
-                $("#attackBtn").addClass("disabled");
+                $("#attackBtn").prop('disabled', true);
                 $("#resetBtn").removeClass("hide");
             } else if (game[enemyId].health <= 0) { // Target has been defeated
                 if ($.trim($(".characters").html()) == "") { // Check if game is over
                     $("#status").html("You won! GAME OVER!!!");
                     $("#" + enemyId).addClass("hide");
-                    $("#attackBtn").addClass("disabled");
+                    $("#attackBtn").prop('disabled', true);
                     $("#resetBtn").removeClass("hide");
                 } else { // Remove a defeated enemy
                     $("#status").html("You have defeated " + game[enemyId].name + ", you may choose to fight another enemy.");
@@ -114,7 +114,7 @@ $(document).ready(function() {
         $(".charTitle").html("Characters");
         heroSelected = false;
         targetSelected = false;
-        $("#attackBtn").removeClass("disabled");
+        $("#attackBtn").prop('disabled', false);
         $("#status").html("");
         $("#resetBtn").addClass("hide");
     });

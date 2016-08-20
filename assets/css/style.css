@@ -5,8 +5,8 @@ body {
 }
 
 .jumbotron {
-    background-image: url("../images/binding_dark.png");
-    background-repeat: repeat;
+    background: rgb(200, 54, 54);
+	background: rgba(200, 54, 54, 0);
 }
 
 h1 {
