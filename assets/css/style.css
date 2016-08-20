@@ -1,0 +1,19 @@
+body{
+	font-family: 'Share Tech Mono', monospace;
+	background-image: url("../images/background.png");
+	background-repeat: repeat;
+}
+
+.jumbotron{
+	background-image: url("../images/binding_dark.png");
+	background-repeat: repeat;
+}
+
+h1{
+	color: #000;
+	text-shadow: -1px 0 #ffeb07, 0 1px #ffeb07, 1px 0 #ffeb07, 0 -1px #ffeb07;
+}
+
+h2, h4{
+	text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}

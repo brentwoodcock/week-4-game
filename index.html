@@ -11,10 +11,10 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
 	<!-- Bootstrap File -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 	<!-- Font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
 
 	<!-- Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -22,8 +22,50 @@
 
 </head>
 <body>
+<div class="container">
+
+<div class="jumbotron text-center"><h1>Star Wars RPG</h1></div>
+
+<div class="row">
+	<!-- Selected Character Column -->
+	<div class="col-md-2 text-center">
+		<h2>Your Character</h2>
+		<div class="hero"></div>
+	</div>
+
+	<!-- Characters Column -->
+	<div class="col-md-8 text-center">
+		<h2>Characters</h2>
+		<div class="characters">
+		<button type="button" class="btn btn-secondary" id="char1" data-health=120>Obi-Wan Kenobi<br><img src="assets/images/obi-wan.jpg" id="char1" width="135" height="90"><br><span class="char1health" id="char1">120</span></button>
+		<button type="button" class="btn btn-secondary" id="char2">Luke Skywalker<br><img src="assets/images/luke-skywalker.jpg" id="char2" width="135" height="90"><br><span class="char2health" id="char2">100</span></button>
+		<button type="button" class="btn btn-secondary" id="char3">Darth Sidious<br><img src="assets/images/darth-sidious.png" id="char3" width="135" height="90"><br><span class="char3health" id="char3">150</span></button>
+		<button type="button" class="btn btn-secondary" id="char4">Darth Maul<br><img src="assets/images/darth-maul.jpeg" id="char4" width="135" height="90"><br><span class="char4health" id="char4">180</span></button>
+		</div>
+	</div>
+
+	<!-- Enemy Column -->
+	<div class="col-md-2 text-center">
+		<h2>Your Enemy</h2>
+		<div class="target"></div>
+	</div>
+</div>
 
 
+<div class="row">
+	<!-- Attack Area -->
+	<div class="col-md-12 text-center">
+		<button type="button" class="btn btn-danger" id="attackBtn">Attack</button>
+		<h4 id="status"></h4>
+		<button type="button" class="btn btn-success hide" id="resetBtn">Restart</button>
+	</div>
+</div>
+
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- Game Javascript -->
+<script src="assets/javascript/game.js"></script>
 
 </body>
 </html>
