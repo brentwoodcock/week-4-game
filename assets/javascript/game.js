@@ -57,11 +57,11 @@ $(document).ready(function() {
     $(".characters").on("click", function(event) {
 
         if (heroSelected == false) { // Sets user's character
-            $("#" + event.target.id).addClass("selectedChar").removeClass("possChar").appendTo($(".hero"));
+            $("#" + $(event.target).data('char')).addClass("selectedChar").removeClass("possChar").appendTo($(".hero"));
             heroSelected = true;
             $(".charTitle").html("Enemies Available to Attack");
         } else if (targetSelected == false) { // Sets enemy character
-            $("#" + event.target.id).addClass("selectedTarget").removeClass("possChar notSelected").appendTo($(".target"));
+            $("#" + $(event.target).data('char')).addClass("selectedTarget").removeClass("possChar notSelected").appendTo($(".target"));
             targetSelected = true;
         }
         $(".possChar").addClass("notSelected");
